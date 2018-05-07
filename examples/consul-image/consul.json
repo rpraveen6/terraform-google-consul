@@ -1,9 +1,9 @@
 {
   "min_packer_version": "1.0.4",
   "variables": {
-    "project_id": null,
-    "zone": null,
-    "consul_version": "0.9.3"
+    "project_id": "eminent-goods-203108",
+    "zone": "us-central1-f",
+    "consul_version": "1.0.3"
   },
   "builders": [{
     "type": "googlecompute",
@@ -21,6 +21,7 @@
   },{
     "type": "shell",
     "inline": [
+      "git clone --branch1.0.3 https://github.com/rpraveen6/terraform-google-consul.git /tmp/consul-gcp-module",
       "/tmp/terraform-google-consul/modules/install-consul/install-consul --version {{user `consul_version`}}",
       "/tmp/terraform-google-consul/modules/install-dnsmasq/install-dnsmasq"
     ],
