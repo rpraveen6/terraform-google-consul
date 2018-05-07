@@ -21,7 +21,7 @@
   },{
     "type": "shell",
     "inline": [
-      "git clone --branch1.0.3 https://github.com/rpraveen6/terraform-google-consul.git /tmp/consul-gcp-module",
+      "git clone --branch 1.0.3 https://github.com/rpraveen6/terraform-google-consul.git /tmp/consul-gcp-module",
       "/tmp/terraform-google-consul/modules/install-consul/install-consul --version {{user `consul_version`}}",
       "/tmp/terraform-google-consul/modules/install-dnsmasq/install-dnsmasq"
     ],
