@@ -47,9 +47,9 @@ output "firewall_rule_inbound_http_name" {
 }
 
 output "firewall_rule_inbound_dns_url" {
-  value = "${google_compute_firewall.allow_inbound_dns.*.self_link}"
+  value = "${google_compute_firewall.allow_inbound_dns.self_link}"
 }
 
 output "firewall_rule_inbound_dns_name" {
-  value = "${google_compute_firewall.allow_inbound_dns.*.name}"
+  value = "${google_compute_firewall.allow_inbound_dns.name}"
 }
